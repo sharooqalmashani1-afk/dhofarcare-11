@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DhofarCare — Smart Home Services in Dhofar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div>📍 Dhofar, Oman</div>
+    <div>📞 +968 72 345 678</div>
+    <div>🟢 WhatsApp: +968 92 345 678</div>
+    <div>✉ hello@dhofarcare.om</div>
+  </div>
+  <header class="nav">
+    <div class="brand">
+      <img src="assets/logo.png" class="logo" alt="DhofarCare logo" />
+      <div>
+        <h1>DhofarCare</h1>
+        <p>Smart Home Services Platform</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#tech">AI • Cloud • VR</a>
+      <a href="#book">Book</a>
+    </nav>
+  </header>
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <h2>Book trusted home services in Dhofar — 24/7</h2>
+      <p>AI assistant, cloud booking, VR demo. We connect families and SMEs with verified local providers.</p>
+      <div class="actions">
+        <a class="btn" href="#book">Book Now</a>
+        <a class="btn ghost" href="#services">Explore Services</a>
+      </div>
+      <ul class="bullets">
+        <li>✓ Dhofar areas only</li>
+        <li>✓ Instant auto-reply</li>
+        <li>✓ Admin email + Google Sheets</li>
+      </ul>
+    </div>
+    <div class="hero-right">
+      <img src="assets/home-services.jpg" alt="Home services" />
+    </div>
+  </section>
+  <section id="services" class="section services">
+    <h3>Services</h3>
+    <div class="grid">
+      <div class="card">🧹 Cleaning</div>
+      <div class="card">❄️ AC Repair</div>
+      <div class="card">🚰 Plumbing</div>
+      <div class="card">💡 Electrical</div>
+      <div class="card">🎨 Painting & Décor</div>
+      <div class="card">📹 CCTV & Smart Home</div>
+      <div class="card">🚗 Car Wash</div>
+      <div class="card">🏡 Gardening</div>
+    </div>
+    <p class="note">Prices: small jobs 5–10 OMR • AC/Electrical/Plumbing 15–25 OMR • final price depends on area & technician.</p>
+  </section>
+  <section id="tech" class="section tech">
+    <h3>AI • Cloud • VR</h3>
+    <div class="grid3">
+      <div class="card2">
+        <h4>AI auto-reply</h4>
+        <p>Answers common questions: services, price, areas, 24/7, how to book.</p>
+      </div>
+      <div class="card2">
+        <h4>Cloud & Google Sheets</h4>
+        <p>Every booking is stored instantly to your Google Sheet via Apps Script.</p>
+      </div>
+      <div class="card2">
+        <h4>VR demo</h4>
+        <p>Embed a short maintenance demo video in the media section.</p>
+      </div>
+    </div>
+  </section>
+  <section id="book" class="section book">
+    <h3>Book a Service</h3>
+    <form id="bookingForm" class="form">
+      <div class="row">
+        <input id="name" name="name" placeholder="Full name" required />
+        <input id="phone" name="phone" placeholder="Phone number" required />
+      </div>
+      <div class="row">
+        <input id="email" name="email" type="email" placeholder="Email" required />
+        <input id="area" name="area" placeholder="Area in Dhofar (e.g., Salalah, Taqah)" required />
+      </div>
+      <div class="row">
+        <select id="service" name="service" required>
+          <option value="">Select a service</option>
+          <option>Cleaning</option>
+          <option>Electrical</option>
+          <option>Plumbing</option>
+          <option>AC Repair</option>
+          <option>Painting</option>
+        </select>
+        <input id="when" name="when" type="datetime-local" required />
+      </div>
+      <div class="paybox">
+        <p><strong>Step 1:</strong> Submit your booking to save it to Google Sheets.</p>
+        <button type="button" id="saveBtn" class="btn">Submit Booking</button>
+        <p class="muted">You will see a success message below if saved.</p>
+        <hr />
+        <p><strong>Step 2:</strong> Complete secure payment on the hosted payment page.</p>
+        <a id="payBtn" class="btn pay" target="_blank" href="#">💳 Pay Now</a>
+        <p class="muted">After payment, you’ll be redirected back to our site.</p>
+      </div>
+      <div id="successBox" class="hidden success">
+        ✅ Booking saved! Please click <b>Pay Now</b> to complete payment.
+      </div>
+      <div id="errorBox" class="hidden error">
+        ⚠️ Could not save booking. Please try again.
+      </div>
+    </form>
+    <div class="helper">
+      <a id="waBtn" class="btn ghost" target="_blank" href="#">WhatsApp us your request</a>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>© 2025 DhofarCare — Smart Digital Platform for Home Services in Dhofar.</p>
+  </footer>
+  <div id="chat" class="chat">
+    <div class="chat-head" onclick="toggleChat()">🤖 DhofarCare AI Assistant <span>online</span></div>
+    <div id="chatBody" class="chat-body">
+      <div class="msg bot">Hello 👋 I can help with services, prices, areas, 24/7, and booking.</div>
+      <div class="msg bot">What is your name?</div>
+    </div>
+    <div class="chat-input">
+      <input id="chatInput" placeholder="Type here…" onkeydown="if(event.key==='Enter'){sendMsg();}" />
+      <button onclick="sendMsg()">Send</button>
+    </div>
+  </div>
+  <button class="chat-toggle" onclick="toggleChat()">💬</button>
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

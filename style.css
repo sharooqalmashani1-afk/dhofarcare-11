@@ -1,0 +1,45 @@
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:#0f172a;background:#f3f6ff}
+.topbar{display:flex;gap:12px;justify-content:center;align-items:center;background:#fff;border-bottom:1px solid rgba(15,23,42,.06);padding:6px 10px;font-size:13px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 6%;background:#ffffff;position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(15,23,42,.06)}
+.brand{display:flex;gap:10px;align-items:center}
+.logo{width:56px;height:56px;object-fit:contain}
+.brand h1{font-size:18px;margin:0}
+.brand p{font-size:12px;margin:0;color:#6b7280}
+.nav nav a{color:#0f172a;text-decoration:none;margin-left:14px;font-weight:600}
+.nav nav a:hover{color:#5b21b6}
+.hero{display:flex;gap:28px;align-items:center;padding:32px 6%;background:linear-gradient(120deg,#0f6fbf 0%,#0f6fbf 55%,#f3f6ff 55%);color:#fff}
+.hero-left{flex:1;min-width:260px}
+.hero-left h2{margin:0 0 8px;font-size:28px}
+.hero-left p{margin:0 0 12px;color:#e8f3ff}
+.actions .btn{margin-right:8px}
+.bullets{list-style:none;padding:0;margin:12px 0 0;display:flex;gap:10px;flex-wrap:wrap}
+.hero-right img{width:320px;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.18);background:#fff}
+.section{padding:28px 6%}
+.services .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:12px}
+.card{background:#fff;border:1px solid rgba(15,23,42,.06);border-radius:12px;padding:12px;text-align:center;font-weight:600;box-shadow:0 10px 26px rgba(15,23,42,.04)}
+.note{margin-top:10px;color:#64748b;font-size:13px}
+.tech .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+.card2{background:#fff;border:1px solid rgba(15,23,42,.06);border-radius:12px;padding:14px;box-shadow:0 10px 26px rgba(15,23,42,.04)}
+.book .form{background:#fff;border:1px solid rgba(15,23,42,.06);border-radius:12px;padding:14px;max-width:760px;box-shadow:0 10px 26px rgba(15,23,42,.04)}
+.row{display:flex;gap:10px;margin-bottom:10px}
+input,select{flex:1;padding:10px;border:1px solid rgba(15,23,42,.15);border-radius:10px}
+.paybox{margin-top:10px;border:1px dashed rgba(15,23,42,.2);border-radius:10px;padding:10px;background:#f8faff}
+.btn{background:#5b21b6;color:#fff;border:none;border-radius:10px;padding:10px 14px;cursor:pointer;text-decoration:none;display:inline-block;font-weight:700}
+.btn.ghost{background:transparent;color:#5b21b6;border:2px solid #5b21b6}
+.btn.pay{background:#0f6fbf}
+.muted{color:#6b7280;font-size:13px}
+.success{margin-top:10px;background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46;padding:10px;border-radius:10px}
+.error{margin-top:10px;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:10px;border-radius:10px}
+.helper{margin-top:10px}
+.footer{padding:20px 6%;text-align:center;color:#94a3b8}
+.chat{position:fixed;right:16px;bottom:80px;width:300px;background:#fff;border:1px solid rgba(15,23,42,.1);border-radius:12px;box-shadow:0 18px 40px rgba(15,23,42,.2);display:none;flex-direction:column;overflow:hidden}
+.chat-head{background:#0f6fbf;color:#fff;padding:8px 10px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.chat-body{padding:8px;max-height:260px;overflow:auto;display:flex;flex-direction:column;gap:6px}
+.msg{padding:8px 10px;border-radius:10px;font-size:14px;max-width:90%}
+.msg.bot{background:#e6f3ff}
+.msg.user{background:#ede9fe;align-self:flex-end}
+.chat-input{display:flex;gap:6px;padding:8px;border-top:1px solid rgba(15,23,42,.06)}
+.chat-input input{flex:1;border:1px solid rgba(15,23,42,.15);border-radius:10px;padding:8px}
+.chat-input button{background:#0f6fbf;border:none;color:#fff;border-radius:10px;padding:8px 12px;cursor:pointer}
+.chat-toggle{position:fixed;right:16px;bottom:24px;width:50px;height:50px;border-radius:999px;background:#0f6fbf;color:#fff;border:none;cursor:pointer;box-shadow:0 18px 40px rgba(15,23,42,.25);font-size:18px}
+@media(max-width:900px){.hero{flex-direction:column;padding:22px}.hero-right img{width:100%}.row{flex-direction:column}}
